@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teacher Portal</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="C:\Users\SACHIN\Desktop\Student Management System\css\bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="C:\Users\SACHIN\Desktop\Student Management System\font-awesome\css\font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="C:\Users\SACHIN\Desktop\Student Management System\styles\stylesforteacher.css">
+</head>
+<body>
+
+	<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+	<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">Tasks</button>
+	<button class="tablink" onclick="openPage('Dashboard', this, 'blue')">Dashboard</button>
+	<button class="tablink" onclick="openPage('Attendance', this, 'orange')">Attendance Corner </button>
+
+	<div id="Home" class="tabcontent">
+  		<h3>Home</h3>
+  		<p>Home is where the heart is..</p>
+	</div>
+
+	<div id="News" class="tabcontent">
+  		<h3>Tasks</h3>
+  		<p>Some Tasks You Might Wish to do</p>
+  		 <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-users fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">Student</div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#AddHomework">Add Student Details
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                 	<div class="clearfix"></div>                                
+                            </button>
+                        </div>
+                    </div> 
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-tasks fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">HomeWork</div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#AddHomework">Assign Homework
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                 	<div class="clearfix"></div>                                
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-envelope fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">Message</div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#SendMessage">Message A Parent 
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                 	<div class="clearfix"></div>                                
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-bell fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">Notification</div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#SendNotification">Send A Notification 
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                 	<div class="clearfix"></div>                                
+                            </button>
+                        </div>
+                    </div>
+
+
+		</div>
+		<!-- Modal -->
+  		<div class="modal fade" id="AddStudent" role="dialog">
+    	<div class="modal-dialog">
+    
+      	<!-- Modal content-->
+      	<div class="modal-content">
+        	<div class="modal-header">
+          		<button type="button" class="close" data-dismiss="modal">&times;</button>
+          		<h4 class="modal-title">Add Student Details</h4>
+        	</div>
+        	<div class="modal-body">
+          		<form class="form-group">
+          			<label for="UserName"><h4>Student Id</h4> </label>
+					<input type="text" name="StudentId" class="form-control">
+					<label for="StudentName"><h4>Student Name</h4></label>
+					<input type="text" name="StudentName" class="form-control">
+					<label for="Std"><h4>Standard</h4></label>
+					<input type="text" name="Standard" class="form-control">
+					<label for="Address"><h4>Address</h4></label>
+					<textarea name="Address" rows="3" class="form-control"></textarea>
+					<label for="FatherName"><h4>Father's Name</h4></label>
+					<input type="text" name="FatherName" class="form-control">
+					<button type="submit" class="btn btn-primary">Add Details</button>
+          		</form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+ <div class="modal fade" id="AddHomework" role="dialog">
+    	<div class="modal-dialog">
+    
+      	<!-- Modal content-->
+      	<div class="modal-content">
+        	<div class="modal-header">
+          		<button type="button" class="close" data-dismiss="modal">&times;</button>
+          		<h4 class="modal-title">Add Homework</h4>
+        	</div>
+        	<div class="modal-body">
+          		<form class="form-group">
+          			<label for="HomeworkId"><h4>Homework Id</h4> </label>
+					<input type="text" name="HomeworkId" class="form-control">
+					<label for="Subject"><h4>Subject</h4></label>
+					<input type="text" name="StudentName" class="form-control">
+					<label for="description"><h4>Description</h4></label>					
+					<textarea name="Address" rows="3" class="form-control"></textarea>					
+					<button type="submit" class="btn btn-primary">Add Details</button>
+          		</form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="modal fade" id="SendMessage" role="dialog">
+    	<div class="modal-dialog">
+    
+      	<!-- Modal content-->
+      	<div class="modal-content">
+        	<div class="modal-header">
+          		<button type="button" class="close" data-dismiss="modal">&times;</button>
+          		<h4 class="modal-title">Send Message</h4>
+        	</div>
+        	<div class="modal-body">
+          		<form class="form-group">
+          			<label for="Message"><h4>ParentId</h4> </label>					
+					<input type="text" name="Message" class="form-control">
+          			<label for="Message"><h4>Message</h4> </label>					
+					<textarea name="Address" rows="3" class="form-control"></textarea>					
+					<button type="submit" class="btn btn-primary">Send Message</button>
+          		</form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="modal fade" id="SendNotification" role="dialog">
+    	<div class="modal-dialog">
+    
+      	<!-- Modal content-->
+      	<div class="modal-content">
+        	<div class="modal-header">
+          		<button type="button" class="close" data-dismiss="modal">&times;</button>
+          		<h4 class="modal-title">Send Notification</h4>
+        	</div>
+        	<div class="modal-body">
+          		<form class="form-group">          			
+          			<label for="Message"><h4>Message</h4> </label>					
+					<textarea name="Message" rows="3" class="form-control"></textarea>					
+					<button type="submit" class="btn btn-primary">Send Message</button>
+          		</form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+   
+</div>
+
+	<div id="Dashboard" class="tabcontent">
+  		<h3>Dashboard</h3>
+  		<div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-users fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">Number Of Student</div>
+                                        <div>50</div>
+                                    </div>
+                                </div>
+                            </div>                                                                                            
+                        </div>
+                    </div> 
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-tasks fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">Attendance</div>
+                                        <div>45</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+  		
+	</div>
+</div>
+
+	<div id="Attendance" class="tabcontent">
+  		<h3>Attendance</h3>
+  		<form class="form-group">
+  			<label for="Date">Select Date</label>
+  			<input type="Date" name="AttendanceDate" class="form-control">
+  			<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Student Name</th>
+        <th>Attendance</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td><button class="btn btn-success">Mark as Present</button><button class="btn btn-danger">Mark as Absent</button></td>
+        
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td><button class="btn btn-success">Mark as Present</button><button class="btn btn-danger">Mark as Absent</button></td>
+        
+      </tr>
+      <tr>
+        <td>July</td>
+        <td><button class="btn btn-success">Mark as Present</button><button class="btn btn-danger">Mark As Absent</button></td>
+        
+      </tr>
+    </tbody>
+  </table>
+  </form>
+</div>
+
+<!-- DivTable.com -->
+	</div>
+	<script>
+	function openPage(pageName,elmnt,color) {
+    	var i, tabcontent, tablinks;
+    	tabcontent = document.getElementsByClassName("tabcontent");
+    	for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    	}
+    	tablinks = document.getElementsByClassName("tablink");
+    	for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    	}
+    	document.getElementById(pageName).style.display = "block";
+    	elmnt.style.backgroundColor = color;
+	}
+// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+	</script>     
+	<script type="text/javascript" src="C:\Users\SACHIN\Desktop\Student Management System\js\jquery-3.3.1.min.js"> </script>
+	<script type="text/javascript" src="C:\Users\SACHIN\Desktop\Student Management System\js\bootstrap.min.js"></script>
+</body>
+</html>

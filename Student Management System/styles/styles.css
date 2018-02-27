@@ -1,0 +1,61 @@
+body,html
+{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+.panel-primary
+{
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);	
+}
+.btn-primary
+{
+	margin-left: 40%;
+	margin-top: 10px;
+}
+body
+{
+	background-image:url('C:/Users/SACHIN/Desktop/Student Management System/nirmanbg.jpg');
+	height: 100%;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.panel
+{
+	background: transparent;
+	
+}
+.panel-primary>.panel-heading
+{
+background:transparent;
+}
+input
+{
+	background-color: transparent;
+	
+}
+input:focus
+{
+	outline: none;
+}
+.form-control
+{
+	background-color: transparent;
+}
+h4
+{
+	color:white;
+	font-weight: bold;
+	font-size: 22px;
+}
+.huge
+{
+	font-size: 40px;
+}
